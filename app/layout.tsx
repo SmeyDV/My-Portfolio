@@ -7,6 +7,7 @@ import { Inter } from 'next/font/google';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -38,9 +39,9 @@ export default function Layout({ children }) {
           </nav>
           {menuOpen && (
             <div className="md:hidden bg-blue-700 text-white mt-2 rounded-lg shadow-lg">
-              <a href="/about" className="block py-2 px-4 hover:bg-blue-600 transition-colors">About</a>
-              <a href="/projects" className="block py-2 px-4 hover:bg-blue-600 transition-colors">Projects</a>
-              <a href="/contact" className="block py-2 px-4 hover:bg-blue-600 transition-colors">Contact</a>
+              <Link href="/about" className="block py-2 px-4 hover:bg-blue-600 transition-colors">About</Link>
+              <Link href="/projects" className="block py-2 px-4 hover:bg-blue-600 transition-colors">Projects</Link>
+              <Link href="/contact" className="block py-2 px-4 hover:bg-blue-600 transition-colors">Contact</Link>
             </div>
           )}
         </header>
